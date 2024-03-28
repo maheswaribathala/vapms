@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<tittle>Show/Hide Comment Form Example using innerHTML</tittle>
+
+<script>  
+var flag=true;  
+function commentform(){  
+var cform="<form action='Comment'>Enter Name:<br><input type='text' name='name'/><br/>Enter Email:<br><input type='email'name='email'/><br>Enter Comment:<br/><textarea rows='5' cols='70'></textarea><br><input type='submit' value='Post Comment'/></form>";  
+if(flag){  
+document.getElementById("mylocation").innerHTML=cform;  
+flag=false;  
+}else{  
+document.getElementById("mylocation").innerHTML="";  
+flag=true;  
+}  
+}  
+</script>  
+  
+<button onclick="commentform()">Comment</button>  
+<div id="mylocation"></div>   
+</head>
+<body>
+
+</body>
+</html>

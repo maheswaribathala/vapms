@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document object model</title>
+	<script type="text/javascript">  
+function printvalue(){  
+var name=document.form1.name.value;  
+alert("Welcome: "+name);  
+}  
+</script>  
+  
+<form name="form1">  
+Enter Name:<input type="text" name="name"/>  
+<input type="button" onclick="printvalue()" value="print name"/>  
+</form> 
+
+
+<tittle>document.getElementById() method</tittle>
+
+<script type="text/javascript">  
+function getcube(){  
+var number=document.getElementById("number").value;  
+alert(number*number*number);  
+}  
+</script>  
+<form>  
+Enter No:<input type="text" id="number" name="number"/><br/>  
+<input type="button" value="cube" onclick="getcube()"/>  
+</form> <br>
+
+
+
+<tittle>document.getElementsByName() method</tittle>
+
+ <script type="text/javascript">  
+function totalelements()  
+{  
+var allgenders=document.getElementsByName("gender");  
+alert("Total Genders:"+allgenders.length);  
+}  
+</script>  
+<form>  
+Male:<input type="radio" name="gender" value="male">  
+Female:<input type="radio" name="gender" value="female">  
+  
+<input type="button" onclick="totalelements()" value="Total Genders">  
+</form>  <br>
+
+<title>document.getElementsByTagName() method</title>
+
+
+<script type="text/javascript">  
+function countpara(){  
+var totalpara=document.getElementsByTagName("p");  
+alert("total p tags are: "+totalpara.length);  
+  
+}  
+</script>  
+<p>This is a pragraph</p>  
+<p>Here we are going to count total number of paragraphs by getElementByTagName() method.</p>  
+<p>Let's see the simple example</p>  
+<button onclick="countpara()">count paragraph</button>
+
+<tittle> innerHTML property</tittle>
+
+<script type="text/javascript" >  
+function showcommentform() {  
+var data="Name:<input type='text' name='name'><br>Comment:<br><textarea rows='5' cols='80'></textarea><br><inputtype='submit'value='Post Comment'>";
+
+document.getElementById('mylocation').innerHTML=data;  
+}  
+</script>  
+<form name="myForm">  
+<input type="button" value="comment" onclick="showcommentform()">  
+<div id="mylocation"></div>  
+</form> 
+
+<tittle>Show/Hide Comment Form Example using innerHTML</tittle>
+
+<script>  
+var flag=true;  
+function commentform(){  
+var cform="<form action='Comment'>Enter Name:<br><input type='text' name='name'/><br/>Enter Email:<br><input type='email'name='email'/><br>Enter Comment:<br/><textarea rows='5' cols='70'></textarea><br><input type='submit' value='Post Comment'/></form>";  
+if(flag){  
+document.getElementById("mylocation").innerHTML=cform;  
+flag=false;  
+}else{  
+document.getElementById("mylocation").innerHTML="";  
+flag=true;  
+}  
+}  
+</script>  
+</head>  
+<body>  
+<button onclick="commentform()">Comment</button>  
+<div id="mylocation"></div>     
+</head>
+<body>
+
+</body>
+</html>
